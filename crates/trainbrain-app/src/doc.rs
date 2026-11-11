@@ -114,7 +114,7 @@ pub struct Doc {
     pub line: Option<PieceId>,
     /// Simulated trains (not saved with the layout).
     pub sim: trainbrain_model::sim::Sim,
-    sim_clock: Option<std::time::Instant>,
+    sim_clock: Option<web_time::Instant>,
     /// The Trains panel's picks: where each train is to go, where to start one.
     pub goto: std::collections::HashMap<u32, u32>,
     pub start_at: Option<u32>,
@@ -138,7 +138,7 @@ pub struct Doc {
     pub last_recording: Option<PathBuf>,
     /// A note the plan shows for a few seconds (what an action did or why
     /// it could not).
-    pub note: Option<(String, std::time::Instant, bool)>,
+    pub note: Option<(String, web_time::Instant, bool)>,
     /// Bumped on every change, so views can tell.
     pub rev: u64,
     /// A view asked for everything to be framed.
@@ -185,7 +185,7 @@ pub struct Doc {
     /// A park-all's order being chosen on another thread, and when (wall
     /// clock) it was asked for: past `PARK_PLAN_PATIENCE` the fleet goes
     /// without it.
-    pub park_plan: Option<(std::sync::mpsc::Receiver<Option<trainbrain_model::sim::ParkOrder>>, std::time::Instant)>,
+    pub park_plan: Option<(std::sync::mpsc::Receiver<Option<trainbrain_model::sim::ParkOrder>>, web_time::Instant)>,
 }
 
 impl Doc {
@@ -282,7 +282,7 @@ impl Doc {
     pub fn tell(&mut self, msg: impl Into<String>, bad: bool) {
         let msg = msg.into();
         self.status = msg.clone();
-        self.note = Some((msg, std::time::Instant::now(), bad));
+        self.note = Some((msg, web_time::Instant::now(), bad));
     }
 
     /// Work everything out again from the layout.
@@ -318,7 +318,7 @@ impl Doc {
     /// Run the simulation up to now. Safe to call more than once a frame.
     /// True while it is running (keep redrawing).
     pub fn tick(&mut self) -> bool {
-        let now = std::time::Instant::now();
+        let now = web_time::Instant::now();
         let dt = self.sim_clock.map_or(0.0, |c| (now - c).as_secs_f64().min(0.1));
         self.sim_clock = Some(now);
         // Faster than real time: several steps of at most 50 ms each (and
@@ -374,10 +374,10 @@ impl Doc {
             self.sim.planning = true;
             let (tx, rx) = std::sync::mpsc::channel();
             let (copy, l) = (self.sim.clone(), self.layout.clone());
-            std::thread::spawn(move || {
+            trainbrain_model::spawn(move || {
                 let _ = tx.send(copy.plan_park(&l));
             });
-            self.park_plan = Some((rx, std::time::Instant::now()));
+            self.park_plan = Some((rx, web_time::Instant::now()));
         }
         n
     }
@@ -418,7 +418,7 @@ impl Doc {
             self.sim.wants_plan = false;
             let (tx, rx) = std::sync::mpsc::channel();
             let (sim, l) = (self.sim.clone(), self.layout.clone());
-            std::thread::spawn(move || {
+            trainbrain_model::spawn(move || {
                 let cat = trainbrain_model::Catalog::builtin();
                 let r = l.resolve(&cat);
                 let _ = tx.send(sim.fleet_plan(&l, &r));
@@ -605,7 +605,17 @@ impl Doc {
 
     /// One of the samples by name (showcase, network...).
     pub fn open_sample(&mut self, name: &str) -> Result<(), String> {
-        self.open(sample_path(name))
+        #[cfg(not(target_arch = "wasm32"))]
+        return self.open(sample_path(name));
+        // (In a page the samples are built in: no files to read.)
+        #[cfg(target_arch = "wasm32")]
+        {
+            let json = web_sample(name).ok_or_else(|| format!("no sample {name} in the web build"))?;
+            let l = Layout::from_json(json)?;
+            self.status = format!("opened the sample {name}");
+            self.replace(l, None);
+            Ok(())
+        }
     }
 
     pub fn open(&mut self, path: PathBuf) -> Result<(), String> {
@@ -888,13 +898,27 @@ pub fn kind_name(k: MarkerKind) -> &'static str {
 pub const MARKER_KINDS: [MarkerKind; 4] = [MarkerKind::Beacon, MarkerKind::Block, MarkerKind::Signal, MarkerKind::Buffer];
 
 /// Where the samples are (next to the source, for now).
+/// The samples, built into the web build.
+#[cfg(target_arch = "wasm32")]
+fn web_sample(name: &str) -> Option<&'static str> {
+    macro_rules! samples {
+        ($($n:literal),*) => {
+            match name {
+                $($n => Some(include_str!(concat!(env!("CARGO_MANIFEST_DIR"), "/../../samples/", $n, ".layout.json"))),)*
+                _ => None,
+            }
+        };
+    }
+    samples!("central", "figure8", "network-generated", "network", "passing-loop", "showcase")
+}
+
 pub fn sample_path(name: &str) -> PathBuf {
     PathBuf::from(concat!(env!("CARGO_MANIFEST_DIR"), "/../../samples")).join(format!("{name}.layout.json"))
 }
 
 /// Wall-clock time, roughly, for the log (no chrono dependency).
 fn chrono_now() -> String {
-    let secs = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).map_or(0, |d| d.as_secs());
+    let secs = web_time::SystemTime::now().duration_since(web_time::UNIX_EPOCH).map_or(0, |d| d.as_secs());
     let (h, m) = ((secs / 3600) % 24, (secs / 60) % 60);
     format!("{h:02}:{m:02} UTC")
 }

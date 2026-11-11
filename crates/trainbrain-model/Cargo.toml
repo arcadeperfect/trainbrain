@@ -10,3 +10,4 @@ description = "The model railway layout: track pieces, libraries, geometry, snap
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["float_roundtrip"] }
 rayon = "1"
+web-time = "1"

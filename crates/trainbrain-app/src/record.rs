@@ -6,7 +6,7 @@
 use std::io::Write;
 use std::path::PathBuf;
 use std::process::{Child, ChildStdin, Command, Stdio};
-use std::time::{Duration, Instant};
+use web_time::{Duration, Instant};
 
 /// What is wanted of a recording, from the menu or over MCP.
 #[derive(Clone, Debug)]
@@ -46,7 +46,7 @@ pub fn ffmpeg() -> Option<PathBuf> {
 pub fn default_file() -> PathBuf {
     let dir = std::path::Path::new(concat!(env!("CARGO_MANIFEST_DIR"), "/../../recordings"));
     let _ = std::fs::create_dir_all(dir);
-    let t = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).map_or(0, |d| d.as_secs());
+    let t = web_time::SystemTime::now().duration_since(web_time::UNIX_EPOCH).map_or(0, |d| d.as_secs());
     dir.join(format!("trainbrain-{t}.mp4"))
 }
 

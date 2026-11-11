@@ -8,6 +8,9 @@
 //! The server thread answers `initialize` and `tools/list` itself; each
 //! `tools/call` is handed to the UI thread (`Call`), run against the open
 //! document by `tools::call` between frames, and the answer sent back.
+//! (In a page there is no server: `Call` and the handlers stay, unused.)
+
+#![cfg_attr(target_arch = "wasm32", allow(dead_code, unused_imports))]
 
 use std::sync::mpsc::{channel, Receiver, Sender};
 use std::time::Duration;
@@ -24,6 +27,7 @@ pub struct Call {
     pub reply: Sender<Result<Value, String>>,
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 /// Start serving on `port`. Calls arrive on the receiver; `wake` is
 /// called after each one is queued so the UI thread looks.
 pub fn start(port: u16, wake: impl Fn() + Send + 'static) -> Result<Receiver<Call>, String> {
@@ -65,10 +69,12 @@ pub fn start(port: u16, wake: impl Fn() + Send + 'static) -> Result<Receiver<Cal
     Ok(rx)
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 fn header(k: &str, v: &str) -> tiny_http::Header {
     tiny_http::Header::from_bytes(k.as_bytes(), v.as_bytes()).expect("a valid header")
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 fn json_response(v: &Value) -> tiny_http::Response<std::io::Cursor<Vec<u8>>> {
     tiny_http::Response::from_string(v.to_string()).with_header(header("Content-Type", "application/json"))
 }

@@ -2,9 +2,11 @@
 //! changed in the colours… window (only the changes), the text sizes, and
 //! which layers of the plan are shown. One JSON file per user:
 //! `~/Library/Application Support/trainbrain/prefs.json` on a Mac,
-//! `$XDG_CONFIG_HOME/layout/prefs.json` (or `~/.config/...`) elsewhere.
+//! `$XDG_CONFIG_HOME/trainbrain/prefs.json` (or `~/.config/...`) elsewhere.
+//! In a page: the browser's local storage, under `layout/prefs`.
 
 use std::collections::BTreeMap;
+#[cfg(not(target_arch = "wasm32"))]
 use std::path::PathBuf;
 
 use crate::doc::{Show, TextScale};
@@ -18,6 +20,7 @@ pub struct Prefs {
     pub show: Show,
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 fn path() -> Option<PathBuf> {
     let home = std::env::var_os("HOME").map(PathBuf::from);
     let dir = if cfg!(target_os = "macos") {
@@ -29,6 +32,7 @@ fn path() -> Option<PathBuf> {
 }
 
 /// The saved prefs, or the defaults when there are none (or they do not read).
+#[cfg(not(target_arch = "wasm32"))]
 pub fn load() -> Prefs {
     let Some(p) = path() else { return Prefs::default() };
     match std::fs::read_to_string(&p) {
@@ -40,6 +44,7 @@ pub fn load() -> Prefs {
     }
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 pub fn save(prefs: &Prefs) {
     let Some(p) = path() else { return };
     if let Some(dir) = p.parent() {
@@ -52,5 +57,25 @@ pub fn save(prefs: &Prefs) {
             }
         }
         Err(e) => log::warn!("prefs: {e}"),
+    }
+}
+
+#[cfg(target_arch = "wasm32")]
+const KEY: &str = "layout/prefs";
+
+#[cfg(target_arch = "wasm32")]
+fn storage() -> Option<web_sys::Storage> {
+    web_sys::window()?.local_storage().ok()?
+}
+
+#[cfg(target_arch = "wasm32")]
+pub fn load() -> Prefs {
+    storage().and_then(|s| s.get_item(KEY).ok()?).and_then(|s| serde_json::from_str(&s).ok()).unwrap_or_default()
+}
+
+#[cfg(target_arch = "wasm32")]
+pub fn save(prefs: &Prefs) {
+    if let (Some(st), Ok(s)) = (storage(), serde_json::to_string(prefs)) {
+        let _ = st.set_item(KEY, &s);
     }
 }

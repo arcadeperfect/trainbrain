@@ -20,6 +20,9 @@
 //! | `mcp`    | the MCP server (HTTP on localhost)                  |
 //! | `look`   | colours and coordinate helpers                      |
 
+// (Much of the app is the native one's alone: in a page it lies unused.)
+#![cfg_attr(target_arch = "wasm32", allow(dead_code))]
+
 mod doc;
 mod lineedit;
 mod look;
@@ -34,26 +37,42 @@ mod prefs;
 mod tabs;
 mod theme;
 mod tools;
+#[cfg(target_arch = "wasm32")]
+mod web;
 
+// (The native app: winit windows, the MCP server, captures. In a page,
+// `web` hosts the same editor on eframe's canvas.)
+#[cfg(not(target_arch = "wasm32"))]
 use std::path::PathBuf;
-use std::time::{Duration, Instant};
+#[cfg(not(target_arch = "wasm32"))]
+use web_time::{Duration, Instant};
 
+#[cfg(not(target_arch = "wasm32"))]
 use imfram::dock::{Docks, Side, Tree};
+#[cfg(not(target_arch = "wasm32"))]
 use imfram::shell::Gpu;
+#[cfg(not(target_arch = "wasm32"))]
 use winit::application::ApplicationHandler;
+#[cfg(not(target_arch = "wasm32"))]
 use winit::event::WindowEvent;
+#[cfg(not(target_arch = "wasm32"))]
 use winit::event_loop::{ActiveEventLoop, ControlFlow, EventLoop, EventLoopProxy};
+#[cfg(not(target_arch = "wasm32"))]
 use winit::window::WindowId;
 
+#[cfg(not(target_arch = "wasm32"))]
 use doc::Doc;
+#[cfg(not(target_arch = "wasm32"))]
 use tabs::{Editor, Role, Tab};
 
+#[cfg(not(target_arch = "wasm32"))]
 struct State {
     gpu: Gpu,
     docks: Docks<Tab>,
     editor: Editor,
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 struct App {
     state: Option<State>,
     shot: Option<PathBuf>,
@@ -72,6 +91,7 @@ struct App {
     proxy: EventLoopProxy<()>,
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 impl App {
     fn open(&mut self, el: &ActiveEventLoop) {
         let gpu = Gpu::standalone().expect("a GPU");
@@ -285,6 +305,7 @@ impl App {
     }
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 impl ApplicationHandler for App {
     fn resumed(&mut self, el: &ActiveEventLoop) {
         if self.state.is_none() {
@@ -383,6 +404,7 @@ impl ApplicationHandler for App {
     }
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 impl App {
     /// MCP calls run here, between frames; then every window redraws.
     fn serve(&mut self) {
@@ -400,6 +422,7 @@ fn scenario_index(s: &str) -> usize {
     trainbrain_model::scenarios::find(s).unwrap_or(0)
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 fn main() {
     env_logger::init();
     trainbrain_model::sim::limit_play_threads();
@@ -411,4 +434,9 @@ fn main() {
     let proxy = el.create_proxy();
     let mut app = App { state: None, shot, file: tabs::arg_path(&args), port, tab: flag("--tab"), scenario: flag("--scenario"), speed: flag("--speed").and_then(|s| s.parse().ok()), realistic: args.iter().any(|a| a == "--realistic"), drift: flag("--drift").and_then(|s| s.parse().ok()), proxy };
     el.run_app(&mut app).expect("the event loop");
+}
+
+#[cfg(target_arch = "wasm32")]
+fn main() {
+    web::start();
 }

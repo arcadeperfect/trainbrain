@@ -30,6 +30,15 @@ pub mod sim;
 pub mod timeplan;
 pub mod topo;
 
+/// Work off the caller's thread: a thread of its own, or in a page (wasm,
+/// where there are no threads) done at once, before this returns.
+pub fn spawn(f: impl FnOnce() + Send + 'static) {
+    #[cfg(not(target_arch = "wasm32"))]
+    std::thread::spawn(f);
+    #[cfg(target_arch = "wasm32")]
+    f();
+}
+
 pub use geom::{Pose, Seg, V2};
 pub use layout::{EndRef, Fit, Layout, Marker, MarkerKind, Move, Pair, Station, Piece, PieceId, Placed, Resolved, Tier, Track};
 pub use library::{Catalog, Family, Kind, Library, Scale, Shape};

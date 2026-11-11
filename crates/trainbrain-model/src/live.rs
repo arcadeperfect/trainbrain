@@ -566,7 +566,7 @@ impl Games {
         for (a, b) in std::mem::take(&mut sim.jams) {
             let (tx, rx) = std::sync::mpsc::channel();
             let (copy, l) = (sim.clone(), layout.clone());
-            std::thread::spawn(move || {
+            crate::spawn(move || {
                 let _ = tx.send(copy.game_verdict(&l, a, b));
             });
             self.pending.push(rx);
@@ -754,8 +754,8 @@ impl Live {
                 } else {
                     let (tx, rx) = std::sync::mpsc::channel();
                     let (sim, l) = (belief.clone(), layout.clone());
-                    std::thread::spawn(move || {
-                        let at = std::time::Instant::now();
+                    crate::spawn(move || {
+                        let at = web_time::Instant::now();
                         let v = sim.foresee(&l);
                         let _ = tx.send((v, at.elapsed().as_secs_f64()));
                     });

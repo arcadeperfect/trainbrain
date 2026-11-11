@@ -2,6 +2,8 @@
 
 Layout design, train planning and simulation for a fully autonomous model railway. Rust, with its UI on [imfram](https://github.com/arcadeperfect/imfram) (egui).
 
+**Try it in your browser: [trainbrain.pages.dev](https://trainbrain.pages.dev)**
+
 ![trainbrain](shots/8-everything-realistic.png)
 
 - **Track editor**: lay HO / N sectional and flex track on a to-scale plan, with snapping, points, crossovers, double track and gradients
