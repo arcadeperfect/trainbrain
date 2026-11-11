@@ -1,0 +1,7 @@
+target/
+.DS_Store
+*.bak-*
+bench/
+tools/jamwatch.log
+tools/jamwatch.status.json
+.claude/settings.local.json

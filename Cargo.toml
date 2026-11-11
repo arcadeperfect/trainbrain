@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = ["crates/trainbrain-model", "crates/trainbrain-app"]
+
+[workspace.package]
+edition = "2021"
+publish = false
+license = "GPL-3.0-or-later"
+repository = "https://github.com/arcadeperfect/trainbrain"
+
+# Fast-turnaround build for sims and sweeps on a big dev box:
+# release speed at the hot loop, but incremental and highly parallel codegen
+# so an edit to the model rebuilds in seconds. Release itself is untouched
+# (the shipped app has to run on modest hardware).
+#   cargo build --profile sweep -p trainbrain-model --examples
+#   -> target/sweep/examples/livebench
+[profile.sweep]
+inherits = "release"
+incremental = true
+codegen-units = 256
+debug = false

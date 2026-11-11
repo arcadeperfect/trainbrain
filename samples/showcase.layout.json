@@ -1,0 +1,1836 @@
+{
+  "version": 2,
+  "name": "Showcase: double track, yard and branch",
+  "scale": "HO",
+  "pieces": [
+    {
+      "id": 2,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 2400.0,
+        "y": 0.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 3,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 2709.712770159708,
+        "y": 128.28722984029218,
+        "h": 0.7853981633974483
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 4,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 2838.0,
+        "y": 438.0,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 5,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 2709.712770159708,
+        "y": 747.7127701597078,
+        "h": 2.356194490192345
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 7,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 0.0,
+        "y": 876.0000000000003,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 8,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": -309.7127701597078,
+        "y": 747.7127701597082,
+        "h": -2.356194490192345
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 9,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": -438.0,
+        "y": 438.00000000000034,
+        "h": -1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 10,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": -309.7127701597078,
+        "y": 128.28722984029253,
+        "h": -0.7853981633974483
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 12,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": 2400.0,
+        "y": -67.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 13,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": 2757.0889244992063,
+        "y": 80.91107550079349,
+        "h": 0.7853981633974483
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 14,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": 2905.0,
+        "y": 438.0,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 15,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": 2757.0889244992063,
+        "y": 795.0889244992065,
+        "h": 2.356194490192345
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 17,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": 8.205133554287266e-15,
+        "y": 943.0000000000003,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 18,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": -357.0889244992065,
+        "y": 795.0889244992069,
+        "h": -2.356194490192345
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 19,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": -505.0,
+        "y": 438.00000000000034,
+        "h": -1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 20,
+      "track": {
+        "flex": [
+          {
+            "type": "arc",
+            "radius": 505.0,
+            "angle": 0.7853981633974483
+          }
+        ]
+      },
+      "pose": {
+        "x": -357.0889244992065,
+        "y": 80.91107550079383,
+        "h": -0.7853981633974483
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 21,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 260.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 0.0,
+        "y": 0.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 23,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 260.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 0.0,
+        "y": -67.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 25,
+      "track": {
+        "kind": "ho/xo"
+      },
+      "pose": {
+        "x": 260.0,
+        "y": 0.0,
+        "h": 0.0
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 26,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 320.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 740.0,
+        "y": 0.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 28,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 320.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 740.0,
+        "y": -67.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 30,
+      "track": {
+        "kind": "ho/xo"
+      },
+      "pose": {
+        "x": 1540.0,
+        "y": 0.0,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 31,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 960.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 2400.0,
+        "y": 876.0,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 32,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 960.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 960.0,
+        "y": 876.0000000000002,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 34,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 960.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 960.0,
+        "y": 943.0000000000002,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 35,
+      "track": {
+        "kind": "ho/xx"
+      },
+      "pose": {
+        "x": 1440.0,
+        "y": 876.0000000000001,
+        "h": 3.141592653589793
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 36,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 375.99999999999994
+          }
+        ]
+      },
+      "pose": {
+        "x": 1540.0,
+        "y": 0.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 37,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 316.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 2084.0,
+        "y": 0.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": true
+    },
+    {
+      "id": 38,
+      "track": {
+        "kind": "ho/pt-22"
+      },
+      "pose": {
+        "x": 2084.0,
+        "y": 0.0,
+        "h": 3.141592653589793
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 39,
+      "track": {
+        "kind": "ho/r2-22"
+      },
+      "pose": {
+        "x": 1916.3846566240907,
+        "y": 33.34076476005643,
+        "h": 2.7488935718910685
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 40,
+      "track": {
+        "kind": "ho/pt-22"
+      },
+      "pose": {
+        "x": 1748.7693132481813,
+        "y": 66.68152952011292,
+        "h": 3.141592653589793
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 41,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 1580.7693132481813,
+        "y": 66.68152952011293,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 42,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 1244.7693132481813,
+        "y": 66.68152952011297,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 43,
+      "track": {
+        "kind": "ho/buf"
+      },
+      "pose": {
+        "x": 908.7693132481813,
+        "y": 66.68152952011302,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 44,
+      "track": {
+        "kind": "ho/r2-22"
+      },
+      "pose": {
+        "x": 1581.153969872272,
+        "y": 100.02229428016935,
+        "h": 2.7488935718910685
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 45,
+      "track": {
+        "kind": "ho/pt-22"
+      },
+      "pose": {
+        "x": 1413.5386264963627,
+        "y": 133.36305904022583,
+        "h": 3.141592653589793
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 46,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 1245.5386264963627,
+        "y": 133.36305904022586,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 47,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 909.5386264963627,
+        "y": 133.3630590402259,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 48,
+      "track": {
+        "kind": "ho/buf"
+      },
+      "pose": {
+        "x": 573.5386264963627,
+        "y": 133.36305904022592,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 49,
+      "track": {
+        "kind": "ho/r2-22"
+      },
+      "pose": {
+        "x": 1245.9232831204533,
+        "y": 166.70382380028227,
+        "h": 2.7488935718910685
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 50,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 1078.307939744544,
+        "y": 200.04458856033875,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 51,
+      "track": {
+        "kind": "ho/s168"
+      },
+      "pose": {
+        "x": 742.307939744544,
+        "y": 200.04458856033878,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 52,
+      "track": {
+        "kind": "ho/buf"
+      },
+      "pose": {
+        "x": 574.307939744544,
+        "y": 200.0445885603388,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 53,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 375.99999999999994
+          }
+        ]
+      },
+      "pose": {
+        "x": 1540.0,
+        "y": -67.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 54,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 316.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 2084.0,
+        "y": -67.0,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 55,
+      "track": {
+        "kind": "ho/pt-22"
+      },
+      "pose": {
+        "x": 1916.0,
+        "y": -67.0,
+        "h": 0.0
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 56,
+      "track": {
+        "kind": "ho/r2-22"
+      },
+      "pose": {
+        "x": 2083.615343375909,
+        "y": -100.3407647600564,
+        "h": -0.3926990816987246
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 57,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 2251.230686751818,
+        "y": -133.68152952011286,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 58,
+      "track": {
+        "kind": "ho/buf"
+      },
+      "pose": {
+        "x": 2587.230686751818,
+        "y": -133.68152952011286,
+        "h": 0.0
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 59,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 516.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 2400.0,
+        "y": 943.0,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 60,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 276.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 1716.0,
+        "y": 943.0000000000001,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 61,
+      "track": {
+        "kind": "ho/pt-22"
+      },
+      "pose": {
+        "x": 1884.0,
+        "y": 943.0000000000001,
+        "h": 3.141592653589793
+      },
+      "mirror": true,
+      "z": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "state": 0,
+      "prefer": false
+    },
+    {
+      "id": 62,
+      "track": {
+        "kind": "ho/r2-22"
+      },
+      "pose": {
+        "x": 1716.3846566240907,
+        "y": 976.3407647600566,
+        "h": 2.7488935718910685
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        0.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 63,
+      "track": {
+        "flex": [
+          {
+            "type": "straight",
+            "len": 700.0
+          }
+        ]
+      },
+      "pose": {
+        "x": 1548.7693132481813,
+        "y": 1009.681529520113,
+        "h": 3.141592653589793
+      },
+      "mirror": false,
+      "z": [
+        0.0,
+        19.48945978277568
+      ],
+      "state": 0
+    },
+    {
+      "id": 64,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 848.7693132481813,
+        "y": 1009.6815295201131,
+        "h": 3.141592653589793
+      },
+      "mirror": true,
+      "z": [
+        19.48945978277568,
+        29.06725954352168
+      ],
+      "state": 0
+    },
+    {
+      "id": 65,
+      "track": {
+        "kind": "ho/r2-45"
+      },
+      "pose": {
+        "x": 539.0565430884735,
+        "y": 1137.9687593604053,
+        "h": 2.356194490192345
+      },
+      "mirror": true,
+      "z": [
+        29.06725954352168,
+        38.645059304267676
+      ],
+      "state": 0
+    },
+    {
+      "id": 66,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 410.76931324818133,
+        "y": 1447.6815295201131,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        38.645059304267676,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 67,
+      "track": {
+        "kind": "ho/pt-22"
+      },
+      "pose": {
+        "x": 410.76931324818133,
+        "y": 1783.6815295201131,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 68,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 410.76931324818133,
+        "y": 1951.6815295201131,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 69,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 410.76931324818133,
+        "y": 2287.681529520113,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 70,
+      "track": {
+        "kind": "ho/buf"
+      },
+      "pose": {
+        "x": 410.76931324818133,
+        "y": 2623.681529520113,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 71,
+      "track": {
+        "kind": "ho/r2-22"
+      },
+      "pose": {
+        "x": 377.42854848812493,
+        "y": 1951.2968728960225,
+        "h": 1.9634954084936211
+      },
+      "mirror": true,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 72,
+      "track": {
+        "kind": "ho/s336"
+      },
+      "pose": {
+        "x": 344.0877837280685,
+        "y": 2118.912216271932,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 73,
+      "track": {
+        "kind": "ho/s168"
+      },
+      "pose": {
+        "x": 344.0877837280685,
+        "y": 2454.912216271932,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    },
+    {
+      "id": 74,
+      "track": {
+        "kind": "ho/buf"
+      },
+      "pose": {
+        "x": 344.0877837280685,
+        "y": 2622.912216271932,
+        "h": 1.5707963267948966
+      },
+      "mirror": false,
+      "z": [
+        48.0,
+        48.0
+      ],
+      "state": 0
+    }
+  ],
+  "markers": [
+    {
+      "id": 1,
+      "kind": "beacon",
+      "name": "Central 1",
+      "piece": 32,
+      "route": 0,
+      "at": 360.0
+    },
+    {
+      "id": 2,
+      "kind": "beacon",
+      "name": "Central 2",
+      "piece": 34,
+      "route": 0,
+      "at": 360.0
+    },
+    {
+      "id": 3,
+      "kind": "beacon",
+      "name": "South 1",
+      "piece": 37,
+      "route": 0,
+      "at": 166.0
+    },
+    {
+      "id": 4,
+      "kind": "beacon",
+      "name": "South 2",
+      "piece": 54,
+      "route": 0,
+      "at": 166.0
+    },
+    {
+      "id": 5,
+      "kind": "beacon",
+      "name": "East 1",
+      "piece": 3,
+      "route": 0,
+      "at": 344.0043955680824
+    },
+    {
+      "id": 6,
+      "kind": "beacon",
+      "name": "East 2",
+      "piece": 13,
+      "route": 0,
+      "at": 396.62607251571137
+    },
+    {
+      "id": 7,
+      "kind": "beacon",
+      "name": "West 1",
+      "piece": 9,
+      "route": 0,
+      "at": 3.410599273803189e-13
+    },
+    {
+      "id": 8,
+      "kind": "beacon",
+      "name": "West 2",
+      "piece": 19,
+      "route": 0,
+      "at": 3.410600704501816e-13
+    },
+    {
+      "id": 9,
+      "kind": "beacon",
+      "name": "Works",
+      "piece": 57,
+      "route": 0,
+      "at": 168.0
+    },
+    {
+      "id": 10,
+      "kind": "beacon",
+      "name": "Yard 1",
+      "piece": 42,
+      "route": 0,
+      "at": 168.0
+    },
+    {
+      "id": 11,
+      "kind": "beacon",
+      "name": "Yard 2",
+      "piece": 47,
+      "route": 0,
+      "at": 168.0
+    },
+    {
+      "id": 12,
+      "kind": "beacon",
+      "name": "Yard 3",
+      "piece": 51,
+      "route": 0,
+      "at": 84.0
+    },
+    {
+      "id": 13,
+      "kind": "beacon",
+      "name": "Hill 1",
+      "piece": 73,
+      "route": 0,
+      "at": 84.0
+    },
+    {
+      "id": 14,
+      "kind": "beacon",
+      "name": "Hill 2",
+      "piece": 69,
+      "route": 0,
+      "at": 168.0
+    },
+    {
+      "id": 15,
+      "kind": "beacon",
+      "name": "w1",
+      "piece": 21,
+      "route": 0,
+      "at": 10.0
+    },
+    {
+      "id": 16,
+      "kind": "beacon",
+      "name": "w2",
+      "piece": 26,
+      "route": 0,
+      "at": 250.0
+    },
+    {
+      "id": 17,
+      "kind": "beacon",
+      "name": "w3",
+      "piece": 23,
+      "route": 0,
+      "at": 10.0
+    },
+    {
+      "id": 18,
+      "kind": "beacon",
+      "name": "w4",
+      "piece": 28,
+      "route": 0,
+      "at": 250.0
+    },
+    {
+      "id": 19,
+      "kind": "beacon",
+      "name": "w5",
+      "piece": 36,
+      "route": 0,
+      "at": 250.0
+    },
+    {
+      "id": 20,
+      "kind": "beacon",
+      "name": "w6",
+      "piece": 53,
+      "route": 0,
+      "at": 250.0
+    },
+    {
+      "id": 21,
+      "kind": "beacon",
+      "name": "w7",
+      "piece": 31,
+      "route": 0,
+      "at": 710.0
+    },
+    {
+      "id": 22,
+      "kind": "beacon",
+      "name": "w8",
+      "piece": 60,
+      "route": 0,
+      "at": 26.0
+    },
+    {
+      "id": 23,
+      "kind": "beacon",
+      "name": "w9",
+      "piece": 59,
+      "route": 0,
+      "at": 266.0
+    },
+    {
+      "id": 24,
+      "kind": "beacon",
+      "name": "w10",
+      "piece": 63,
+      "route": 0,
+      "at": 77.99780221595881
+    },
+    {
+      "id": 25,
+      "kind": "beacon",
+      "name": "w11",
+      "piece": 66,
+      "route": 0,
+      "at": 86.0
+    }
+  ],
+  "schematic": {},
+  "next_id": 75,
+  "pairs": [
+    {
+      "a": 2,
+      "b": 12,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 3,
+      "b": 13,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 4,
+      "b": 14,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 5,
+      "b": 15,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 7,
+      "b": 17,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 8,
+      "b": 18,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 9,
+      "b": 19,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 10,
+      "b": 20,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 21,
+      "b": 23,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 26,
+      "b": 28,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "a": 32,
+      "b": 34,
+      "ends": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "name": "Central",
+      "platforms": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "South",
+      "platforms": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "East",
+      "platforms": [
+        5,
+        6
+      ]
+    },
+    {
+      "name": "West",
+      "platforms": [
+        7,
+        8
+      ]
+    },
+    {
+      "name": "Works",
+      "platforms": [
+        9
+      ]
+    },
+    {
+      "name": "Yard",
+      "platforms": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "name": "Hill",
+      "platforms": [
+        13,
+        14
+      ]
+    }
+  ],
+  "homes": {
+    "Branch": 12,
+    "Inner express": 10,
+    "Outer express": 11
+  },
+  "trains": [
+    {
+      "name": "Inner express",
+      "class": "express",
+      "length": 300.0,
+      "head": {
+        "piece": 37,
+        "route": 0,
+        "s": 166.0,
+        "forward": true
+      },
+      "speed": 0.0,
+      "home": 10,
+      "service": {
+        "stops": [
+          "Central",
+          "South"
+        ],
+        "looped": true,
+        "shuttle": false,
+        "back": false,
+        "dwell": 6.0,
+        "cruise": 450.0,
+        "next": 0,
+        "until": null,
+        "platform": null,
+        "tried": null,
+        "holding": null
+      }
+    },
+    {
+      "name": "Outer express",
+      "class": "express",
+      "length": 300.0,
+      "head": {
+        "piece": 34,
+        "route": 0,
+        "s": 360.0,
+        "forward": false
+      },
+      "speed": 0.0,
+      "home": 11,
+      "service": {
+        "stops": [
+          "South",
+          "Central"
+        ],
+        "looped": true,
+        "shuttle": false,
+        "back": false,
+        "dwell": 6.0,
+        "cruise": 450.0,
+        "next": 0,
+        "until": null,
+        "platform": null,
+        "tried": null,
+        "holding": null
+      }
+    },
+    {
+      "name": "Branch",
+      "class": "local",
+      "length": 300.0,
+      "head": {
+        "piece": 73,
+        "route": 0,
+        "s": 84.0,
+        "forward": true
+      },
+      "speed": 0.0,
+      "home": 12,
+      "service": {
+        "stops": [
+          "Hill",
+          "Works"
+        ],
+        "looped": false,
+        "shuttle": true,
+        "back": false,
+        "dwell": 6.0,
+        "cruise": 450.0,
+        "next": 0,
+        "until": null,
+        "platform": null,
+        "tried": null,
+        "holding": null
+      }
+    }
+  ],
+  "lines": [
+    {
+      "name": "Main",
+      "colour": [
+        230,
+        80,
+        70
+      ],
+      "stops": [
+        {
+          "station": "Central",
+          "express": false,
+          "goods": false
+        },
+        {
+          "station": "South",
+          "express": false,
+          "goods": false
+        }
+      ],
+      "pattern": "round",
+      "dwell": 12.0,
+      "cruise": [
+        400.0,
+        450.0,
+        300.0
+      ]
+    },
+    {
+      "name": "Branch",
+      "colour": [
+        70,
+        140,
+        230
+      ],
+      "stops": [
+        {
+          "station": "Hill",
+          "express": false,
+          "goods": false
+        },
+        {
+          "station": "Works",
+          "express": false,
+          "goods": false
+        }
+      ],
+      "pattern": "end_to_end",
+      "dwell": 12.0,
+      "cruise": [
+        400.0,
+        450.0,
+        300.0
+      ]
+    }
+  ],
+  "trains_running": true
+}
